@@ -1,0 +1,49 @@
+# Promptly Board - Build Progress
+
+## Current Status: ALL MILESTONES COMPLETE
+
+### Milestone 1: Core Directory (MVP) - COMPLETE
+- [x] F01: Tool cards grid layout
+- [x] F02: Category filter tabs/buttons
+- [x] F03: Search bar functionality
+- [x] F04: Load tools from static JSON
+- [x] F05: Pagination (12 per page)
+- [x] F12: Responsive mobile-first layout
+- [x] S07: Semantic HTML throughout
+
+### Milestone 2: Submissions & Sorting - COMPLETE
+- [x] F06: Tool count display per category
+- [x] F07: Sort options (rating, name, newest)
+- [x] F08: Submit a Tool form page
+- [x] F09: Form submission to Google Sheets webhook
+- [x] F10: Featured tools section
+
+### Milestone 3: SEO, Ads & Analytics - COMPLETE
+- [x] S01: Meta tags
+- [x] S02: Open Graph tags
+- [x] S03: Twitter Card tags
+- [x] S04: JSON-LD structured data
+- [x] S05: sitemap.xml
+- [x] S06: robots.txt
+- [x] S08: Canonical URL
+- [x] A01: Adsterra ad placeholders
+- [x] A02: Adsterra ad injection script
+- [x] A03: Google AdSense fallback (ca-pub-7098271335538021)
+- [x] A04: Visitor counter
+- [x] A05: Google Sheets visit webhook
+- [x] F11: Tool detail modal
+
+### Milestone 4: i18n, Pages & Polish - COMPLETE
+- [x] I01: Auto i18n browser detection
+- [x] I02: Support 8 languages (EN, KO, JA, ZH, ES, FR, DE, PT)
+- [x] I03: Language selector dropdown
+- [x] I04: Social sharing buttons
+- [x] I05: Feedback email link (taeshinkim11@gmail.com)
+- [x] P01: About page
+- [x] P02: FAQ page
+- [x] P03: Privacy Policy page
+- [x] P04: Terms of Service page
+
+### Deployment
+- [x] GitHub repo created
+- [x] Deployed to Vercel

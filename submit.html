@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Tool - Promptly Board</title>
+  <meta name="description" content="Submit a new AI tool to be featured in the Promptly Board directory.">
+  <link rel="canonical" href="https://promptly-board.vercel.app/submit.html">
+  <meta property="og:title" content="Submit a Tool - Promptly Board">
+  <meta property="og:description" content="Submit a new AI tool to be featured in the Promptly Board directory.">
+  <meta property="og:url" content="https://promptly-board.vercel.app/submit.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Submit a Tool - Promptly Board">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-container" role="navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">⚡ Promptly Board</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/" data-i18n="home">Home</a>
+        <a href="submit.html" data-i18n="submitTool">Submit a Tool</a>
+        <a href="about.html" data-i18n="about">About</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <select class="lang-selector" id="lang-selector" aria-label="Language selector"><option value="en">English</option></select>
+        <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ad -->
+  <div class="ad-slot" id="ad-submit-page">
+    <div class="ad-placeholder">Advertisement - 468x60</div>
+  </div>
+
+  <main>
+    <div class="submit-form-container">
+      <h1 style="font-size:2rem;font-weight:700;color:var(--accent-primary);text-align:center;margin-bottom:0.5rem;" data-i18n="submitTitle">Submit a New AI Tool</h1>
+      <p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem;" data-i18n="submitDesc">Know a great AI tool that should be listed? Submit it below and we'll review it.</p>
+
+      <form class="submit-form" id="submit-form" novalidate>
+        <div class="form-group">
+          <label for="tool-name" data-i18n="fieldToolName">Tool Name</label>
+          <input type="text" id="tool-name" required>
+        </div>
+        <div class="form-group">
+          <label for="tool-url" data-i18n="fieldUrl">Tool URL</label>
+          <input type="url" id="tool-url" required placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label for="tool-description" data-i18n="fieldDescription">Description</label>
+          <textarea id="tool-description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="tool-category" data-i18n="fieldCategory">Category</label>
+          <select id="tool-category" required>
+            <option value="">--</option>
+            <option value="chatbot">AI Chatbots</option>
+            <option value="image-gen">Image Generation</option>
+            <option value="coding">Coding Assistants</option>
+            <option value="writing">Writing Tools</option>
+            <option value="video">Video Creation</option>
+            <option value="audio">Audio & Music</option>
+            <option value="productivity">Productivity</option>
+            <option value="research">Research & Analysis</option>
+            <option value="design">Design Tools</option>
+            <option value="education">Education</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="submitter-email" data-i18n="fieldEmail">Your Email (optional)</label>
+          <input type="email" id="submitter-email">
+        </div>
+        <button type="submit" class="form-submit-btn" data-i18n="submitButton">Submit Tool</button>
+        <div id="form-message" class="form-message"></div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/" data-i18n="home">Home</a>
+        <a href="about.html" data-i18n="about">About</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="terms">Terms of Service</a>
+      </div>
+      <div class="footer-feedback">
+        <span data-i18n="feedbackText">Have feedback?</span>
+        <a href="mailto:taeshinkim11@gmail.com" data-i18n="emailUs">Email us</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Promptly Board.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/submit-form.js"></script>
+  <script src="js/visitor.js"></script>
+  <script src="js/sheets-webhook.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await I18n.init();
+      SubmitForm.init();
+      Visitor.init();
+      SheetsWebhook.logVisit();
+      // Dark mode
+      const toggle = document.getElementById('dark-toggle');
+      if (localStorage.getItem('pb-dark') === 'true') document.body.classList.add('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('pb-dark', document.body.classList.contains('dark'));
+        toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      });
+      // Hamburger
+      document.getElementById('nav-hamburger')?.addEventListener('click', () => {
+        document.getElementById('nav-links')?.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

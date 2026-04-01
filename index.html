@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promptly Board - The Ultimate Free AI Tools & Prompts Directory</title>
+  <meta name="description" content="Discover the best free AI tools for image generation, coding, writing, video creation, and more. Curated directory with ratings and reviews.">
+  <meta name="keywords" content="free AI tools, best AI tools 2025, AI tool directory, AI image generator, AI writing tools, AI tools list, best free AI apps, AI tools for writing">
+  <link rel="canonical" href="https://promptly-board.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Promptly Board - The Ultimate Free AI Tools Directory">
+  <meta property="og:description" content="Discover the best free AI tools for image generation, coding, writing, video creation, and more.">
+  <meta property="og:url" content="https://promptly-board.vercel.app/">
+  <meta property="og:site_name" content="Promptly Board">
+  <meta property="og:image" content="https://promptly-board.vercel.app/assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Promptly Board - The Ultimate Free AI Tools Directory">
+  <meta name="twitter:description" content="Discover the best free AI tools for image generation, coding, writing, video creation, and more.">
+  <meta name="twitter:image" content="https://promptly-board.vercel.app/assets/og-image.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Promptly Board",
+    "description": "The ultimate free AI tools and prompts directory.",
+    "url": "https://promptly-board.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://promptly-board.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Best Free AI Tools",
+    "description": "A curated list of the best free AI tools organized by category.",
+    "numberOfItems": 40,
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ChatGPT", "url": "https://chat.openai.com"},
+      {"@type": "ListItem", "position": 2, "name": "Claude", "url": "https://claude.ai"},
+      {"@type": "ListItem", "position": 3, "name": "Gemini", "url": "https://gemini.google.com"},
+      {"@type": "ListItem", "position": 4, "name": "DALL-E 3", "url": "https://openai.com/dall-e-3"},
+      {"@type": "ListItem", "position": 5, "name": "Midjourney", "url": "https://midjourney.com"},
+      {"@type": "ListItem", "position": 6, "name": "GitHub Copilot", "url": "https://github.com/features/copilot"},
+      {"@type": "ListItem", "position": 7, "name": "Cursor", "url": "https://cursor.sh"},
+      {"@type": "ListItem", "position": 8, "name": "Runway", "url": "https://runwayml.com"},
+      {"@type": "ListItem", "position": 9, "name": "ElevenLabs", "url": "https://elevenlabs.io"},
+      {"@type": "ListItem", "position": 10, "name": "Canva AI", "url": "https://canva.com/ai"}
+    ]
+  }
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav-container" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Promptly Board Home">⚡ Promptly Board</a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">☰</button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/" data-i18n="home">Home</a>
+        <a href="submit.html" data-i18n="submitTool">Submit a Tool</a>
+        <a href="about.html" data-i18n="about">About</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+      </div>
+
+      <div class="nav-right">
+        <select class="lang-selector" id="lang-selector" aria-label="Language selector">
+          <option value="en">English</option>
+        </select>
+        <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ad: Header Banner -->
+  <div class="ad-slot" id="ad-header-banner">
+    <div class="ad-placeholder">Advertisement - 728x90</div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1 data-i18n="siteTitle">Promptly Board</h1>
+    <p data-i18n="siteSubtitle">The Ultimate Free AI Tools & Prompts Directory</p>
+
+    <!-- Search -->
+    <div class="search-container">
+      <span class="search-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+      <input type="search" id="search-input" data-i18n="searchPlaceholder" placeholder="Search AI tools..." aria-label="Search AI tools">
+    </div>
+  </header>
+
+  <main>
+    <!-- Category Filters -->
+    <section aria-label="Category filters">
+      <div class="category-filters" id="category-filters"></div>
+    </section>
+
+    <!-- Results Bar -->
+    <div class="results-bar">
+      <span class="results-count" id="results-count"></span>
+      <div>
+        <label for="sort-select" class="sr-only">Sort by</label>
+        <select id="sort-select" class="sort-select">
+          <option value="rating" data-i18n="sortRating">Rating</option>
+          <option value="name" data-i18n="sortName">Name</option>
+          <option value="newest" data-i18n="sortNewest">Newest</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Featured Tools -->
+    <section class="featured-section" id="featured-section">
+      <h2 data-i18n="featured">Featured Tools</h2>
+      <div class="tools-grid" id="featured-grid"></div>
+    </section>
+
+    <!-- Ad: Between Sections -->
+    <div class="ad-slot">
+      <div class="ad-placeholder">Advertisement - 728x90</div>
+    </div>
+
+    <!-- All Tools Grid -->
+    <section aria-label="All AI tools">
+      <div class="tools-grid" id="tools-grid">
+        <div class="loading" data-i18n="loading">Loading tools...</div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+  </main>
+
+  <!-- Ad: Footer Banner -->
+  <div class="ad-slot" id="ad-footer">
+    <div class="ad-placeholder">Advertisement - 728x90</div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/" data-i18n="home">Home</a>
+        <a href="about.html" data-i18n="about">About</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="terms">Terms of Service</a>
+        <a href="submit.html" data-i18n="submitTool">Submit a Tool</a>
+      </div>
+
+      <!-- Social Sharing -->
+      <div class="footer-social">
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Promptly%20Board%20-%20The%20Ultimate%20Free%20AI%20Tools%20Directory!&url=https://promptly-board.vercel.app" target="_blank" class="share-btn twitter" title="Share on Twitter">X</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://promptly-board.vercel.app" target="_blank" class="share-btn facebook" title="Share on Facebook">f</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://promptly-board.vercel.app" target="_blank" class="share-btn linkedin" title="Share on LinkedIn">in</a>
+        <a href="https://reddit.com/submit?url=https://promptly-board.vercel.app&title=Promptly%20Board%20-%20Free%20AI%20Tools%20Directory" target="_blank" class="share-btn reddit" title="Share on Reddit">r</a>
+      </div>
+
+      <!-- Visitor Counter -->
+      <div class="visitor-counter">
+        <span><span data-i18n="visitorsToday">Visitors Today</span>: <strong id="visitors-today">--</strong></span>
+        <span><span data-i18n="visitorsTotal">Total Visitors</span>: <strong id="visitors-total">--</strong></span>
+      </div>
+
+      <!-- Feedback -->
+      <div class="footer-feedback">
+        <span data-i18n="feedbackText">Have feedback?</span>
+        <a href="mailto:taeshinkim11@gmail.com" data-i18n="emailUs">Email us</a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 Promptly Board. <span data-i18n="madeWith">Made with</span> ❤️ <span data-i18n="forAICommunity">for the AI community</span>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/visitor.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/sheets-webhook.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

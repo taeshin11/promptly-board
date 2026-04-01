@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Promptly Board</title>
+  <meta name="description" content="Terms of Service for Promptly Board AI tools directory.">
+  <link rel="canonical" href="https://promptly-board.vercel.app/terms.html">
+  <meta property="og:title" content="Terms of Service - Promptly Board">
+  <meta property="og:url" content="https://promptly-board.vercel.app/terms.html">
+  <meta name="twitter:card" content="summary">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav-container" role="navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">⚡ Promptly Board</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/" data-i18n="home">Home</a>
+        <a href="submit.html" data-i18n="submitTool">Submit a Tool</a>
+        <a href="about.html" data-i18n="about">About</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <select class="lang-selector" id="lang-selector" aria-label="Language"><option value="en">English</option></select>
+        <button class="dark-toggle" id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <h1 data-i18n="termsTitle">Terms of Service</h1>
+    <p><strong>Last updated:</strong> April 1, 2026</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing and using Promptly Board (promptly-board.vercel.app), you agree to be bound by these Terms of Service. If you do not agree, please do not use the site.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>Promptly Board is a free, curated directory of AI tools. We provide information about third-party AI tools including names, descriptions, categories, ratings, and links to their websites.</p>
+
+    <h2>3. No Warranty</h2>
+    <p>The information on Promptly Board is provided "as is" without any warranty. We do not guarantee the accuracy, completeness, or reliability of any tool information, ratings, or links. Tool availability and features may change without notice.</p>
+
+    <h2>4. Third-Party Links</h2>
+    <p>Promptly Board contains links to third-party websites. We are not responsible for the content, privacy practices, or terms of any linked websites. Visiting third-party sites is at your own risk.</p>
+
+    <h2>5. Tool Submissions</h2>
+    <p>By submitting a tool to Promptly Board, you confirm that:</p>
+    <ul>
+      <li>The information provided is accurate to the best of your knowledge.</li>
+      <li>You have the right to share the tool information.</li>
+      <li>We may review, edit, or reject any submission at our discretion.</li>
+      <li>Approved submissions become part of our public directory.</li>
+    </ul>
+
+    <h2>6. Intellectual Property</h2>
+    <p>The Promptly Board website design, layout, and original content are our intellectual property. Tool names, logos, and descriptions belong to their respective owners. We use them for informational directory purposes under fair use.</p>
+
+    <h2>7. Advertisements</h2>
+    <p>Promptly Board displays advertisements from third-party networks (Adsterra, Google AdSense). We are not responsible for the content of advertisements. Ad interactions are governed by the respective ad network's terms.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>Promptly Board shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of our website or any linked third-party tools.</p>
+
+    <h2>9. Modifications</h2>
+    <p>We reserve the right to modify these Terms at any time. Continued use of the site after changes constitutes acceptance of the new terms.</p>
+
+    <h2>10. Governing Law</h2>
+    <p>These Terms shall be governed by applicable laws. Any disputes shall be resolved through good-faith negotiation.</p>
+
+    <h2>11. Contact</h2>
+    <p>For questions about these Terms, contact us at <a href="mailto:taeshinkim11@gmail.com">taeshinkim11@gmail.com</a>.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Promptly Board.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/visitor.js"></script>
+  <script src="js/sheets-webhook.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await I18n.init();
+      Visitor.init();
+      SheetsWebhook.logVisit();
+      const toggle = document.getElementById('dark-toggle');
+      if (localStorage.getItem('pb-dark') === 'true') document.body.classList.add('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('pb-dark', document.body.classList.contains('dark'));
+        toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+      });
+      document.getElementById('nav-hamburger')?.addEventListener('click', () => {
+        document.getElementById('nav-links')?.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
