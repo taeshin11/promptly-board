@@ -17,13 +17,19 @@ const I18n = (() => {
       return;
     }
 
-    // Detect language
-    const saved = localStorage.getItem('pb-lang');
-    if (saved && supportedLangs.includes(saved)) {
-      currentLang = saved;
+    // Detect language: URL param > localStorage > browser
+    const urlParam = new URLSearchParams(window.location.search).get('lang');
+    if (urlParam && supportedLangs.includes(urlParam)) {
+      currentLang = urlParam;
+      localStorage.setItem('pb-lang', urlParam);
     } else {
-      const browserLang = navigator.language || navigator.languages?.[0] || 'en';
-      currentLang = supportedLangs.find(l => browserLang.startsWith(l)) || 'en';
+      const saved = localStorage.getItem('pb-lang');
+      if (saved && supportedLangs.includes(saved)) {
+        currentLang = saved;
+      } else {
+        const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+        currentLang = supportedLangs.find(l => browserLang.startsWith(l)) || 'en';
+      }
     }
 
     applyTranslations();
