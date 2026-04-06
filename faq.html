@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - Promptly Board</title>
-  <meta name="description" content="Frequently asked questions about Promptly Board AI tools directory.">
+  <title>FAQ - Promptly Board | Prompt Engineering Questions Answered</title>
+  <meta name="description" content="Frequently asked questions about prompt engineering, AI prompts, ChatGPT prompts, system vs user prompts, and how to use Promptly Board's free prompt library.">
+  <meta name="keywords" content="prompt engineering FAQ, ChatGPT prompts questions, how to write AI prompts, system prompt vs user prompt, AI prompt tips">
   <link rel="canonical" href="https://promptly-board.vercel.app/faq.html">
   <link rel="manifest" href="/manifest.json">
-  <meta property="og:title" content="FAQ - Promptly Board">
+  <meta property="og:title" content="FAQ - Promptly Board | Prompt Engineering Questions Answered">
   <meta property="og:url" content="https://promptly-board.vercel.app/faq.html">
   <meta name="twitter:card" content="summary">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021" crossorigin="anonymous"></script>
@@ -20,18 +21,28 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Promptly Board?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Promptly Board is a free, curated directory of the best AI tools available today, organized by category with search and filter functionality." }
+        "name": "What is prompt engineering?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Prompt engineering is the practice of designing precise, well-structured instructions for AI language models to reliably produce high-quality, relevant outputs. It involves choosing the right context, role assignment, constraints, and output format to guide the model's response toward exactly what you need." }
       },
       {
         "@type": "Question",
-        "name": "Is Promptly Board free to use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, Promptly Board is completely free to use. No sign-up or payment is required." }
+        "name": "How do I write an effective AI prompt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An effective prompt includes: (1) a clear role or persona for the AI, (2) relevant context about your situation, (3) a specific, actionable task description, (4) any constraints like length, tone, or audience, and (5) the desired output format. Following these five steps consistently produces dramatically better results than open-ended requests." }
       },
       {
         "@type": "Question",
-        "name": "How can I submit an AI tool?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Visit our Submit a Tool page, fill in the tool details, and our team will review your submission." }
+        "name": "What is the difference between a system prompt and a user prompt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A system prompt is a background instruction that sets the AI's behavior, persona, and rules for an entire conversation. A user prompt is the specific message or request you send during the conversation. System prompts are used primarily by developers building AI applications; user prompts are what everyday users type in chat interfaces." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the prompts on Promptly Board free to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All prompts in the Promptly Board library are completely free to use, copy, and adapt for personal or commercial projects. No account or payment is required. We are a community-driven resource committed to making prompt engineering accessible to everyone." }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes a bad prompt?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bad prompts are typically too vague, lack context, give no format guidance, and make no effort to focus the AI's response. Single-word or one-line prompts without any supporting information almost always produce generic, unsatisfying results." }
       }
     ]
   }
@@ -60,82 +71,126 @@
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        What is Promptly Board? <span>+</span>
+        What is prompt engineering and why does it matter? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Promptly Board is a free, curated directory of the best AI tools available today. We organize tools across 10 categories including chatbots, image generation, coding, writing, video, audio, productivity, research, design, and education.</p>
+        <p>Prompt engineering is the practice of designing and refining the instructions you send to an AI language model — such as ChatGPT, Claude, or Gemini — to consistently get high-quality, relevant, and useful outputs. It matters because the quality of your output from any AI model is almost entirely determined by the quality of your input.</p>
+        <p>Modern large language models (LLMs) are extraordinarily capable, but they rely on the signals you provide to understand what you actually want. Without clear context, role framing, and output instructions, a model defaults to the most statistically average response it can generate — which is rarely what you need. Prompt engineering is the skill that closes the gap between "mediocre AI output" and "genuinely useful AI output."</p>
+        <p>Learning even basic prompt engineering techniques — like assigning a role, specifying an audience, and requesting a format — can make AI tools two to three times more useful for everyday tasks. It is not a niche developer skill anymore; it is a fundamental literacy for the AI age, applicable to writing, coding, research, business analysis, and education alike.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        Is Promptly Board free to use? <span>+</span>
+        How do I write an effective AI prompt, step by step? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Yes! Promptly Board is completely free. No account, no sign-up, and no payment is required. Just browse, search, and discover AI tools.</p>
+        <p>Writing an effective prompt is a learnable, repeatable skill. Follow these five steps to get consistently better results from any AI model:</p>
+        <p><strong>Step 1 — Assign a role:</strong> Start by telling the AI who it is. "Act as an experienced marketing copywriter" or "You are a senior data scientist reviewing a Python script" primes the model to apply domain-specific knowledge and conventions. Role assignment is one of the highest-impact techniques in prompt engineering.</p>
+        <p><strong>Step 2 — Provide context:</strong> Give the AI the background it needs to understand your situation. Who is your audience? What is the goal? What constraints or requirements apply? The more relevant context you include, the more targeted and accurate the response will be.</p>
+        <p><strong>Step 3 — State the task precisely:</strong> Be specific about what you want the AI to do. "Write a 500-word blog introduction" is far more actionable than "write something about our product." Precision in the task description is the single most reliable way to improve output quality.</p>
+        <p><strong>Step 4 — Add constraints:</strong> Specify word count, tone, reading level, what to include, what to avoid, and any other guardrails. Constraints prevent the AI from going off-track and significantly reduce the need for revision.</p>
+        <p><strong>Step 5 — Specify the output format:</strong> Tell the AI exactly how to structure the response — bulleted list, numbered steps, table, JSON, narrative paragraphs, or headers and subheadings. Models follow formatting instructions reliably, and this step alone can save significant post-processing time.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        How do I search for a specific AI tool? <span>+</span>
+        What makes a bad prompt? Common mistakes to avoid. <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Use the search bar on the homepage to type the name or description of the tool you are looking for. You can also filter by category using the category buttons, and sort by rating, name, or date added.</p>
+        <p>Bad prompts share several consistent characteristics, and understanding them helps you avoid the most common pitfalls:</p>
+        <p><strong>Too vague:</strong> Prompts like "tell me about marketing" or "help me with my code" give the AI no useful signal. With no context, no goal, and no constraints, the model produces a broad, generic response that rarely addresses your actual need.</p>
+        <p><strong>No context about the audience or purpose:</strong> Even a specific task without an audience specification leads to generic output. "Write a product description" will produce something average. "Write a product description for a B2B SaaS tool targeting IT managers at mid-size companies, focusing on security and integration capabilities" will produce something genuinely useful.</p>
+        <p><strong>Overloading with unrelated requirements:</strong> Prompts that try to do too many things at once — asking for a blog post, a summary, a list, and a social media caption all in one prompt — often produce confused, half-formed output. Break complex tasks into sequential prompts for better results.</p>
+        <p><strong>Assuming the AI knows your intent:</strong> AI models do not read minds. If you need a formal tone, say so. If you need British spelling, say so. If you want the AI to avoid certain topics, say so explicitly. Never assume the model will infer your preferences from unstated context.</p>
+        <p><strong>No format instruction:</strong> Without a format request, the AI will choose a format on its own — which may not match your needs. Always specify how you want the response structured.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        How can I submit an AI tool? <span>+</span>
+        What is the difference between a system prompt and a user prompt? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Visit our <a href="submit.html">Submit a Tool</a> page. Fill in the tool name, URL, description, and category. Our team will review your submission and add it to the directory if it meets our quality standards.</p>
+        <p>Understanding the distinction between system prompts and user prompts is essential for anyone building AI-powered applications or working with advanced AI interfaces.</p>
+        <p>A <strong>system prompt</strong> is a background instruction provided before the conversation begins. It sets the AI's persona, behavior, rules, and constraints for the entire session. For example, a customer support application might use a system prompt like: "You are a helpful customer support agent for Acme Corp. Always respond politely, in English, and never discuss competitor products. If you cannot answer a question, escalate by asking for the customer's email address." The user never sees the system prompt, but every response the AI gives is shaped by it.</p>
+        <p>A <strong>user prompt</strong> is the specific message or question you send during the conversation. It is the visible, interactive part of the exchange. User prompts trigger the AI's response within the behavioral framework set by the system prompt.</p>
+        <p>For everyday users working in ChatGPT, Claude, or Gemini's standard chat interfaces, the system prompt is either set by the platform or not editable. However, understanding it helps you craft better user prompts — because you can effectively simulate system-prompt behavior by starting your conversation with a comprehensive context-setting message that defines the AI's role and rules before making your actual request.</p>
+        <p>Developers using the OpenAI API, Anthropic API, or Google AI Studio have direct access to set system prompts, making this distinction central to building reliable, consistent AI-powered products.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        How are tools rated? <span>+</span>
+        How do I adapt prompts for different AI models (ChatGPT, Claude, Gemini)? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Tools are rated on a scale of 1 to 5 based on factors including features, ease of use, free tier availability, community feedback, and overall quality. Ratings are reviewed and updated periodically.</p>
+        <p>While the core principles of effective prompting apply to all major AI models, each has distinct characteristics worth understanding when adapting prompts:</p>
+        <p><strong>ChatGPT (OpenAI GPT-4o and variants)</strong> responds well to structured, step-by-step prompts and explicit format instructions. It handles long, complex task descriptions effectively and is particularly strong at code generation, data analysis, and structured document creation. When using ChatGPT, giving it explicit chain-of-thought instructions ("think step by step before answering") often improves reasoning quality.</p>
+        <p><strong>Claude (Anthropic)</strong> is designed with a strong emphasis on safety, nuance, and careful reasoning. It performs exceptionally well on long-document analysis, nuanced writing, and tasks that require balanced judgment. Claude tends to follow detailed instructions closely and benefits from prompts that clearly define boundaries and expectations upfront. It handles very long context windows, making it ideal for document summarization and analysis tasks.</p>
+        <p><strong>Gemini (Google)</strong> integrates multimodal capabilities and has strong real-time information access in some configurations. Prompts for Gemini benefit from being concise and task-focused. It performs well on research, factual Q&A, and tasks that may benefit from current information.</p>
+        <p>The prompts in Promptly Board's library are tagged by which models they perform best with, making it easy to find the right prompt for the model you are using without trial and error.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        What does "Freemium" mean? <span>+</span>
+        Are the prompts on Promptly Board free to use? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Freemium means the tool offers a free tier with limited features, and paid plans for additional features or higher usage limits. Most tools listed on Promptly Board have usable free tiers.</p>
+        <p>Yes — completely and unconditionally free. Every prompt in the Promptly Board library is available to copy, use, and adapt for any purpose, including commercial projects, without requiring an account, payment, or attribution. There are no paywalls, no premium tiers, and no hidden costs.</p>
+        <p>Promptly Board is funded by advertising (Google AdSense and Adsterra), which allows us to keep the entire library free for everyone. We believe that access to good AI prompting resources should not be locked behind subscriptions. The AI productivity gap between those who know how to prompt well and those who do not is already significant — we do not want the cost of a subscription to widen that gap further.</p>
+        <p>If you find a prompt particularly useful or adapt it into something even better, we encourage you to <a href="submit.html">submit your improved version</a> back to the community. That virtuous cycle of sharing and refinement is what makes Promptly Board's library genuinely useful rather than just theoretically comprehensive.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        How often is the directory updated? <span>+</span>
+        How can I contribute or submit prompts to the library? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>We update the directory regularly as new AI tools are released. Community submissions help us discover tools faster. Follow us on social media for update announcements.</p>
+        <p>Contributing to Promptly Board is straightforward and open to everyone. If you have developed a prompt that consistently produces excellent results — whether for a specific task, a specific AI model, or a specific professional context — we want to hear about it.</p>
+        <p>Visit our <a href="submit.html">Submit a Tool</a> page and fill in the prompt details: the prompt text itself, a description of what it does and what output to expect, the category it belongs to, the AI models it works best with, and any required context variables (e.g., fields like [your industry] or [target audience] that the user customizes before use).</p>
+        <p>Our team reviews every submission for quality, originality, and practical utility. We do not add prompts that produce generic output, that are essentially identical to existing library entries, or that require proprietary tools or paid subscriptions to use. We look for prompts that solve real, specific problems and that demonstrate measurably better output than a simple unstructured request would produce. If your submission meets those criteria, it will be added to the library and credited to the community — helping every other Promptly Board user get better results from AI.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        Can I use Promptly Board in my language? <span>+</span>
+        What prompt categories are available in the library? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Yes! Promptly Board supports 8 languages: English, Korean, Japanese, Chinese, Spanish, French, German, and Portuguese. Use the language selector in the navigation bar to switch languages.</p>
+        <p>Promptly Board's library is organized into categories that reflect the most common real-world use cases for AI prompting. Current categories include:</p>
+        <p><strong>Writing and Editing</strong> — Blog posts, articles, email drafts, proofreading, tone adjustment, headline generation, and long-form content creation.</p>
+        <p><strong>Coding and Development</strong> — Code generation, debugging assistance, code review, documentation writing, unit test generation, and algorithm explanation.</p>
+        <p><strong>Marketing and Sales</strong> — Ad copy, landing page text, email campaigns, social media captions, product descriptions, and pitch frameworks.</p>
+        <p><strong>Business and Strategy</strong> — Executive summaries, competitive analysis, business plan sections, meeting agendas, and decision frameworks.</p>
+        <p><strong>Data Analysis and Research</strong> — Data interpretation, research summaries, literature review frameworks, survey question design, and report generation.</p>
+        <p><strong>Education and Learning</strong> — Study guides, lesson plans, quiz generation, concept explanations at different levels, and learning roadmaps.</p>
+        <p><strong>Creative and Brainstorming</strong> — Fiction prompts, idea generation, concept exploration, world-building, character development, and creative constraint exercises.</p>
+        <p><strong>Productivity and Planning</strong> — Task prioritization, project planning, meeting summaries, goal setting, and time management frameworks.</p>
+        <p>Each category is continuously expanded based on community submissions and real-world demand.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
-        How do I report a broken link or incorrect information? <span>+</span>
+        Is Promptly Board accessible on mobile devices? <span>+</span>
       </div>
       <div class="faq-answer">
-        <p>Please email us at <a href="mailto:taeshinkim11@gmail.com">taeshinkim11@gmail.com</a> with the tool name and details about the issue. We will fix it promptly.</p>
+        <p>Yes. Promptly Board is fully responsive and designed to work well on smartphones, tablets, and desktop browsers. The navigation menu collapses into a hamburger menu on small screens, and the prompt library grid adapts to single-column layout for comfortable browsing on mobile devices.</p>
+        <p>The site is also available as a Progressive Web App (PWA), which means you can add it to your home screen on Android or iOS for quick access without opening a browser. PWA mode gives the site an app-like experience — full-screen display, fast loading, and offline access to cached content — without requiring a download from an app store.</p>
+        <p>Mobile users can search, filter by category, and copy prompts to their clipboard with a single tap — making it easy to paste a prompt directly into the ChatGPT mobile app, the Claude app, or any other AI interface on the same device. If you experience any layout or functionality issues on a specific device or browser, please report it to <a href="mailto:taeshinkim11@gmail.com">taeshinkim11@gmail.com</a> and we will address it promptly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.classList.toggle('open')">
+        How do I report incorrect information or a broken link? <span>+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Please email us at <a href="mailto:taeshinkim11@gmail.com">taeshinkim11@gmail.com</a> with the prompt or page name and details about the issue. We take quality seriously and will address reported problems promptly.</p>
       </div>
     </div>
   </main>
@@ -149,7 +204,7 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
       </div>
-      <p class="footer-copy">&copy; 2026 Promptly Board.</p>
+      <p class="footer-copy">&copy; 2026 Promptly Board. Made with ❤️ for the AI community.</p>
     </div>
   </footer>
 
